@@ -12,10 +12,10 @@ deploy:
     provider: elasticbeanstalk
     region: "us-east-2"
     app: "docker-react-udemy"
-    env: "DockerReactUdemy-env-1"
+    env: "DockerReactUdemy-env"
     bucket_name: "elasticbeanstalk-us-east-2-077844377417" 
     bucket_path: "docker-react-udemy"
     on:
         branch: master
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key: $AWS_SECRET_KEY
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
