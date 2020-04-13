@@ -25,6 +25,9 @@ function App() {
       <p className="App-intro">
         Bye there!
       </p>
+      <p className="App-intro">
+        I was changed on feature branch
+      </p>
     </div>
   );
 }
