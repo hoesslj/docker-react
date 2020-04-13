@@ -1,0 +1,9 @@
+language: generic
+sudo: required # need super user to build
+services:
+    - docker # will require docker
+before_install:
+    - docker build -f Dockerfile.dev -t hoesslj/docker-react .
+
+script:
+    - docker run -e CI=true hoesslj/docker-react  npm run test
