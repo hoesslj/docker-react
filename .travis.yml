@@ -7,3 +7,15 @@ before_install:
 
 script:
     - docker run -e CI=true hoesslj/docker-react  npm run test --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "docker-react-udemy"
+    env: "DockerReactUdemy-env-1"
+    bucket_name:"elasticbeanstalk-us-east-2-077844377417" 
+    bucket_path: "docker-react-udemy"
+    on:
+        branch: master
+access_key_id: $AAK
+secret_access_key: $ASK
